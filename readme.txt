@@ -1,5 +1,5 @@
 === BP Spam Killer ===
-Contributors: @mattt55, @bphelp
+Contributors: @bphelp
 Tags: buddypress, spam
 Requires at least: WordPress 3.2 BuddyPress 1.5
 Tested up to: WordPress 3.5.1 BuddyPress 1.7.1
@@ -11,8 +11,8 @@ This light weight plugin will help prevent spam registrations
 == Description ==
 IMPORTANT INFO: You must create a page with the slug 'spam-prevention' so 
 potential spammers recieve a message on their spammy behavior! See Notes for an example message!
-Credit goes to @mattt55 on the BuddyPress forums I just packaged the code as a light weight plugin that
-will help prevent spam registrations.
+Not sure where credit goes too, I got the code on BP Forums and I just packaged the code as a light weight plugin that
+will help prevent spam registrations. If the original author would like credit please contact me on github and I will add you.
 
 == Installation ==
 

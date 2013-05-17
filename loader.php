@@ -8,7 +8,7 @@ Version: 1.0
 Requires at least: WordPress 3.2 / BuddyPress 1.5
 Tested up to: WordPress 3.5.1 / BuddyPress 1.7.1
 License: GNU/GPL 2
-Author: @mattt55, @bphelp 
+Author: @bphelp 
 Author URI: http://www.wordpress.com
 */
 
