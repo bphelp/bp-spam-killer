@@ -18,8 +18,11 @@ function bp_spam_killer_install_buddypress_notice() {
 }
 
 function bphelp_add_honeypot() {
-	echo '';
+	echo '<div style="display: none;">';
+	echo '<input type="text" name="are_you_a_spammer" id="rejected" />';
+	echo '</div>';
 }
+add_action('bp_after_signup_profile_fields','bphelp_add_honeypot');
 	
 function bphelp_check_honeypot() {
 	if (!empty($_POST['system55'])) {
@@ -28,7 +31,5 @@ function bphelp_check_honeypot() {
 			exit;
 	}
 }
-
-add_action('bp_after_signup_profile_fields','bphelp_add_honeypot');
 add_filter('bp_core_validate_user_signup', 'bphelp_check_honeypot');
 ?>
