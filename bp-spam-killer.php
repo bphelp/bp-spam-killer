@@ -28,27 +28,7 @@ function check_honeypot() {
 			exit;
 	}
 }
-	
-/*function add_my_jquery_stuff() {
-    wp_enqueue_script('myjquery', plugins_url( '_inc/my.js' , __FILE__ ) ,array('jquery'));
-    if ($pagenow == 'register.php') {
-        if (isset($_POST['signup_submit'])) echo '<script>ispost = true;</script>';
-        else {
-            echo '<script>var ispost = false;var timestamp = '.time().';</script>';
-            wp_enqueue_script('jquery-cookie',get_bloginfo('stylesheet_directory').'/jquery.cookie.js',array('jquery'));
-        }
-    }
-}
-	
-function my_check_reg_cookie() {
-	if (!isset($_COOKIE['myregcookie']) || time() - $_COOKIE['myregcookie'] < 10) {
-			global $bp;
-			wp_redirect(home_url().'/spam-prevention');
-			exit;
-	}
-}*/
+
 add_action('bp_after_signup_profile_fields','add_honeypot');
 add_filter('bp_core_validate_user_signup', 'check_honeypot');
-/*add_action('wp_enqueue_scripts','add_my_jquery_stuff');
-add_filter('bp_core_validate_user_signup','my_check_reg_cookie');*/
 ?>
