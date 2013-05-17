@@ -17,11 +17,11 @@ function bp_spam_killer_install_buddypress_notice() {
 	echo '</p></div>';
 }
 
-function add_honeypot() {
+function bphelp_add_honeypot() {
 	echo '';
 }
 	
-function check_honeypot() {
+function bphelp_check_honeypot() {
 	if (!empty($_POST['system55'])) {
 			global $bp;
 			wp_redirect(home_url().'/spam-prevention');
@@ -29,6 +29,6 @@ function check_honeypot() {
 	}
 }
 
-add_action('bp_after_signup_profile_fields','add_honeypot');
-add_filter('bp_core_validate_user_signup', 'check_honeypot');
+add_action('bp_after_signup_profile_fields','bphelp_add_honeypot');
+add_filter('bp_core_validate_user_signup', 'bphelp_check_honeypot');
 ?>
